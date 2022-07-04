@@ -1,0 +1,29 @@
+body,html,#mainContent,#root{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#mainContent,#root{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center
+}
+
+#mainContent{
+    display: none;
+}
+
+.card-img-top{
+    width:100%rem;
+    height:15rem;
+}
+
+#toaster{
+    display: none;
+}
+
+#itemTokensDataContainer,#adminButtons,#amIwinnerContainer{
+    display: none;
+}

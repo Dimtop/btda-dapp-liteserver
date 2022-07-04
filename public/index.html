@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Εργασία 3</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="web3.min.js"></script>
+
+        <script src="contractAbi.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"/>
+
+        <script src="main.js"></script>
+
+        <link rel="stylesheet" href="main.css"/>
+    </head>
+    <body>
+    
+        <div id="root">
+            <div class="" role="alert" id="toaster">
+      
+
+            </div>
+            <div class="spinner-border" id="spinner" role="status"></div>
+            <h3 id="spinnerText">Please wait. Some transactions may take some time.</h3>
+            <div id="mainContent">
+                <div>
+                    <h1>Lottery ballot</h1>
+                </div>
+                <div class="container" id="items">
+                    <div class="row justify-content-center">
+                      <div class="col-12 col-md-4">
+                        <div id="item1" class="card w-100" style="width: 18rem;">
+                            <img id="item1image" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title" id="item1title"></h5>
+                              <p class="card-text" id="item1tokens"></p>
+                              <button class="btn btn-primary bid" id="item1bid">Bid</button>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <div id="item2" class="card w-100" style="width: 18rem;">
+                            <img id="item2image" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title" id="item2title"></h5>
+                              <p class="card-text" id="item2tokens"></p>
+                              <button class="btn btn-primary bid" id="item2bid">Bid</button>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <div id="item3" class="card w-100" style="width: 18rem;">
+                            <img id="item3image" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title" id="item3title"></h5>
+                              <p class="card-text" id="item3tokens"></p>
+                              <button class="btn btn-primary bid" id="item3bid">Bid</button>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="container" id="addresses">
+                    <div class="row">
+                        <div class="col">
+                            <h5>Current account</h5>
+                            <input type="text" readonly class="form-control" placeholder="Current account" aria-label="Current account" aria-describedby="basic-addon1" id="currentAccount">
+                        </div>
+                        <div class="col">
+                            <h5>Contract owner</h5>
+                            <input type="text" readonly class="form-control" placeholder="Owner Account" aria-label="Owner Account" aria-describedby="basic-addon1" id="ownerAccount">
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col">
+                            <button class="btn btn-primary" id="reveal">Reveal</button>
+                            <button class="btn btn-primary" id="amIwinner">Am I winner</button>
+                        </div>
+                        <div class="col" id="adminButtons">
+                            <button class="btn btn-secondary" id="withdraw">Widthdraw</button>
+                            <button class="btn btn-secondary" id="declareWinners">Declare winners</button>
+                            <button class="btn btn-secondary" id="restart">Start new lottery</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="container" id="contractInfo">
+                    <div class="row">
+                        <div class="col">
+                            <h5>Current lottery balance:</h5>
+                            <h2 id="lotteryBalance"></h2>
+                        </div>
+                    </div>
+                    <div class="row" id="itemTokensDataContainer">
+                        <div class="col">
+                            <h5>Total item tokens data:</h5>
+                            <h2 id="itemTokensData"></h2>
+                            <button class="btn btn-danger" id="revealClose">Close</button>
+                        </div>
+                    </div>
+                    <div class="row" id="amIwinnerContainer">
+                        <div class="col">
+                            <h5>Items that you win:</h5>
+                            <h2 id="amIwinnerData"></h2>
+                            <button class="btn btn-danger" id="amIwinnerClose">Close</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+           
+        </div>
+       
+    </body>
+</html>
