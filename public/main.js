@@ -114,9 +114,9 @@ async function getStage(){
         jQuery("#item2bid").attr("disabled","true")
         jQuery("#item3bid").attr("disabled","true")
     }else{
-        jQuery("#item1bid").attr("disabled","false")
-        jQuery("#item2bid").attr("disabled","false")
-        jQuery("#item3bid").attr("disabled","false") 
+        jQuery("#item1bid").removeAttr("disabled")
+        jQuery("#item2bid").removeAttr("disabled")
+        jQuery("#item3bid").removeAttr("disabled")
     }
 }
 
